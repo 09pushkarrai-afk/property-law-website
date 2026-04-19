@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Who Owns This Property?</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            background: #f5f5f5;
+            text-align: center;
+        }
+        header {
+            background: #222;
+            color: white;
+            padding: 20px;
+        }
+        .container {
+            padding: 20px;
+        }
+        img {
+            width: 60%;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .answer {
+            display: none;
+            margin-top: 15px;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Who Owns This Property?</h1>
+    <p>Decide the dispute. Understand the law.</p>
+</header>
+
+<div class="container">
+
+    <h2>Story</h2>
+
+    <img src="panel1.png">
+    <p>A buys land in 2000.</p>
+
+    <img src="panel2.png">
+    <p>B starts using the land quietly.</p>
+
+    <img src="panel3.png">
+    <p>15 years pass...</p>
+
+    <img src="panel4.png">
+    <p>A returns and claims ownership.</p>
+
+    <h2>Who owns the property?</h2>
+
+    <button onclick="showAnswer()">A (Original Owner)</button>
+    <button onclick="showAnswer()">B (Possessor)</button>
+
+    <div id="answer" class="answer">
+        <p><b>Correct Answer: B</b></p>
+        <p>Under the Limitation Act, continuous and hostile possession for 12+ years may extinguish the original owner's title.</p>
+<p><b>Is this fair?</b></p>
+<p>The law prioritizes certainty, but may reward wrongful possession.</p>
+    </div>
+
+<h2>Practice</h2>
+
+<p>A occupies land for only 5 years. Can ownership shift?</p>
+
+<button onclick="showPractice()">Show Answer</button>
+
+<div id="practice" class="answer">
+    <p>No. The statutory period (12 years) is not satisfied.</p>
+</div>
+
+<br><br>
+
+<button onclick="showStory2()">View Story 2</button>
+
+<div id="story2" style="display:none;">
+
+<h2>Story 2: Too Late to Claim</h2>
+
+<img src="panel5.png">
+<p>A owns land.</p>
+
+<img src="panel6.png">
+<p>B forcefully takes possession.</p>
+
+<img src="panel7.png">
+<p>13 years pass. A goes to court.</p>
+
+<img src="panel8.png">
+<p>The court dismisses the case as time-barred.</p>
+
+<h3>Can A recover the land?</h3>
+
+<button onclick="showAnswer2()">Yes</button>
+<button onclick="showAnswer2()">No</button>
+
+<div id="answer2" class="answer">
+    <p><b>Correct Answer: No</b></p>
+    <p>The claim is barred by limitation. After 12 years, the owner loses the right to recover the property.</p>
+    <p><b>Important:</b> This does not automatically make B the owner. A loses the legal remedy.</p>
+</div>
+
+</div>
+<script>
+function showAnswer() {
+    document.getElementById("answer").style.display = "block";
+}
+
+function showPractice() {
+    document.getElementById("practice").style.display = "block";
+}
+function showAnswer2() {
+    document.getElementById("answer2").style.display = "block";
+}
+function showStory2() {
+    document.getElementById("story2").style.display = "block";
+}
+</script>
+</body>
+</html>
