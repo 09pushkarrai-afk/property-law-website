@@ -63,6 +63,18 @@ button:hover {
 </header>
 
 <div class="container">
+<div class="card">
+
+    <img src="cover.png">
+
+    <h2>Who Owns This Property?</h2>
+    <p><i>When does time win over title?</i></p>
+
+    <button onclick="showStory1()">Start Case 1</button>
+
+</div>
+
+<div id="story1" style="display:none;">
 
     <h2>Story</h2>
 
@@ -89,6 +101,7 @@ button:hover {
 <p><b>Is this fair?</b></p>
 <p>The law prioritizes certainty, but may reward wrongful possession.</p>
     </div>
+</div>
 
 <h2>Practice</h2>
 
@@ -188,6 +201,9 @@ function showStory3() {
 
 function showAnswer3() {
     document.getElementById("answer3").style.display = "block";
+}
+function showStory1() {
+    document.getElementById("story1").style.display = "block";
 }
 </script>
 </body>
