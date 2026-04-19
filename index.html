@@ -23,15 +23,36 @@
             border-radius: 8px;
         }
         button {
-            padding: 10px 20px;
-            margin: 10px;
-            cursor: pointer;
-        }
-        .answer {
-            display: none;
-            margin-top: 15px;
-            color: green;
-        }
+    padding: 12px 24px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #34495e;
+}
+       .answer {
+    display: none;
+    margin-top: 15px;
+    background: #eafaf1;
+    padding: 15px;
+    border-radius: 8px;
+    color: #145a32;
+}
+.card {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 70%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+}
     </style>
 </head>
 
@@ -110,6 +131,38 @@
     <p>The claim is barred by limitation. After 12 years, the owner loses the right to recover the property.</p>
     <p><b>Important:</b> This does not automatically make B the owner. A loses the legal remedy.</p>
 </div>
+<br><br>
+
+<button onclick="showStory3()">Try Another Scenario (Permission Case)</button>
+
+<div id="story3" style="display:none;" class="card">
+
+<h2>Story 3: Permission vs Possession</h2>
+
+<img src="panel9.png">
+<p>A allows B to use the land with permission.</p>
+
+<img src="panel10.png">
+<p>10 years pass. B continues using the land.</p>
+
+<img src="panel11.png">
+<p>B now claims: “This is my land.”</p>
+
+<img src="panel12.png">
+<p>The dispute reaches court.</p>
+
+<h3>Does B become the owner?</h3>
+
+<button onclick="showAnswer3()">Yes</button>
+<button onclick="showAnswer3()">No</button>
+
+<div id="answer3" class="answer">
+    <p><b>Correct Answer: No</b></p>
+    <p>Adverse possession requires hostile possession. If use began with permission, it cannot become adverse unless clearly denied.</p>
+    <p><b>Key Idea:</b> Permission destroys hostility—so no adverse possession.</p>
+</div>
+
+</div>
 
 </div>
 <script>
@@ -125,6 +178,13 @@ function showAnswer2() {
 }
 function showStory2() {
     document.getElementById("story2").style.display = "block";
+}
+function showStory3() {
+    document.getElementById("story3").style.display = "block";
+}
+
+function showAnswer3() {
+    document.getElementById("answer3").style.display = "block";
 }
 </script>
 </body>
